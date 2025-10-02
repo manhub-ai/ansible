@@ -1,0 +1,37 @@
+- name: Santhosh 
+  DOB:"01-01-2000"
+  AGE:24
+  Addresses:
+   - H.No:123
+      City: Bangalore
+      State: Karnataka
+      Pin:560001
+      Type: Permanent
+   -H.No:321
+      City: Chennai
+      State: Tamilnadu
+      Pin:600001
+      Type: Temporary
+- Skills
+  - Programming Language: Shell Scripting, Python
+  - DevOps Tools: Ansible, Docker, Kubernetes
+  - Cloud Platforms: AWS, Azure
+
+- name: Manju 
+  DOB:"01-01-2001"
+  AGE:26
+  Addresses:
+   - H.No:123
+      City: Bangalore
+      State: Karnataka
+      Pin:560001
+      Type: Permanent
+   -H.No:321
+      City: Chennai
+      State: Tamilnadu
+      Pin:600001
+      Type: Temporary
+- Skills
+  - Programming Language: Shell Scripting, Python
+  - DevOps Tools: Ansible, Docker, Kubernetes
+  - Cloud Platforms: AWS, Azure  

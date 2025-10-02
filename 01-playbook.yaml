@@ -1,0 +1,6 @@
+- name: ping the server
+  hosts: localhost #which server you are connecting to
+  # List of tasks/collections to be run on the server
+  tasks:
+    - name: ping
+      ansible.builtin.ping:
