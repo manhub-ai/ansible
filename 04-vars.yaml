@@ -1,0 +1,42 @@
+- name: Play level variables
+  hosts: localhost
+  connection: localhost
+  vars:
+    student_name: Manju Reddy
+    student_dob: "01-01-2001"
+    student_age: 26
+    addresses:
+      - h_no: 123
+        city: Bangalore
+        state: Karnataka
+        pin: 560001
+        type: Permanent
+      - h_no: 321
+        city: Chennai
+        state: Tamilnadu
+        pin: 600001
+        type: Temporary
+    skills:
+      programming_languages:
+        - Shell Scripting
+        - Python
+      devops_tools:
+        - Ansible
+        - Docker
+        - Kubernetes
+      cloud_platforms:
+        - AWS
+        - Azure
+  tasks:
+    - name: Display student information
+      ansible.builtin.debug:
+        msg:
+          - "Name: {{ student_name }}"
+          - "DOB: {{ student_dob }}"
+          - "Age: {{ student_age }}"
+          - "Addresses:"
+          - "{% for address in addresses %}  - H.No: {{ address.h_no }}, City: {{ address.city }}, State: {{ address.state }}, Pin: {{ address.pin }}, Type: {{ address.type }}{% endfor %}"
+          - "Skills:"
+          - "  - Programming Languages: {{ skills.programming_languages | join(', ') }}"
+          - "  - DevOps Tools: {{ skills.devops_tools | join(', ') }}"
+          - "  - Cloud Platforms: {{ skills.cloud_platforms | join(', ') }}"
