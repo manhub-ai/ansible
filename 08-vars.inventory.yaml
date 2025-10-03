@@ -1,5 +1,5 @@
 - name: variables from files
-  hosts: localhost
+  hosts: frontend
   tasks:
   - name: Print Course details
     ansible.builtin.debug:
