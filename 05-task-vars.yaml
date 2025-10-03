@@ -1,6 +1,5 @@
 - name: Task level variables
-  hosts: local
-  connection: local
+  hosts: localhost
   vars:
     COUSE: "DevSecOps"
     DURATION: 6
