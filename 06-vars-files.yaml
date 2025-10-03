@@ -1,5 +1,5 @@
 - name: vars from files
-  hosts: localhost
+  hosts: frontend
   vars_files:
     - course.yaml
   tasks:
