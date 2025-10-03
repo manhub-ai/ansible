@@ -1,0 +1,20 @@
+- name: data types
+  hosts: localhost
+  vars:
+    COURSE: "DevSecOps with AWS - YAML"
+    DURATION: 10HRS
+    Is_Live: true
+    TOOLS:
+    - Ansible
+    - Docker
+    - Kubernetes
+    - Jenkins    
+    CONCEPTS:
+      Could=AWS
+      CM=Ansible
+      Container=Docker
+      Orchestration=Kubernetes  
+  tasks:
+  - name: Print Course details
+    ansible.builtin.debug:
+      msg: "Course name is: {{ COURSE }}, Duration: {{ DURATION }}, Is Live: {{ Is_Live }}, Tools: {{ TOOLS }}, Concepts: {{ CONCEPTS }}"
