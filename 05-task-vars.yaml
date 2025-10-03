@@ -5,4 +5,6 @@
     DURATION: 6
     TRAINER: "MANJU REDDY"
   tasks:
-    msg: "Course name is: {{ COURSE }}, Duration {{ DURATION }}, Trainer: {{ TRAINER }}""
+    - name: Display course information
+      ansible.builtin.debug:
+        msg: "Course name is: {{ COURSE }}, Duration {{ DURATION }}, Trainer: {{ TRAINER }}"
