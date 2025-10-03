@@ -11,9 +11,9 @@
 - name: PLAY-02
   hosts: frontend
   tasks:
-    - name: Play-02 and Task-01
-      ansible.builltion.debug:
-        msg: "Hello from, Play-02 and Task-01"
-    - name: Play-02 and Task-02
-      ansible.builtin.debug:
-        msg: " Hello from, Play-02 and Task-02"  
+  - name: Play-02 and Task-01
+    ansible.builltion.debug:
+      msg: "Hello from, Play-02 and Task-01"
+  - name: Play-02 and Task-02
+    ansible.builtin.debug:
+      msg: " Hello from, Play-02 and Task-02"  
