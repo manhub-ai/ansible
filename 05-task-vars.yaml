@@ -1,5 +1,5 @@
 - name: Task level variables
-  hosts: localhost
+  hosts: frontend
   vars:
     COUSE: "DevSecOps"
     DURATION: 6
