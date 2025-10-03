@@ -1,0 +1,8 @@
+- name: vars from files
+  hosts: localhost
+  vars_files:
+    - course.yaml
+  tasks:
+    - name: Print Course details
+      anssible.builtin.debug:
+        msg: "Course name is: {{ COURSE }}, Duration: {{ DURATION }}, Trainer: {{ TRAINER }}"
