@@ -1,7 +1,7 @@
 - name: vars from files
   hosts: frontend
   vars_files:
-    - vars/course.yaml
+    - course.yaml
   tasks:
     - name: Print Course details
       ansible.builtin.debug:
