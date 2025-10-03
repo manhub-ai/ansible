@@ -1,0 +1,8 @@
+name: Play level variables
+  hosts: localhost
+  vars:
+    COUSE="DevSecOps"
+    DURATION: 6
+    TRAINER: "MANJU REDDY"
+   tasks:
+    msg: "Course name is: {{ COURSE }}", Duration {{ DURATION }}, Trainer: {{ TRAINER }}
