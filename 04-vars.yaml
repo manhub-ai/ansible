@@ -1,6 +1,5 @@
 - name: Play level variables
-  hosts: local
-  connection: localhost
+  hosts: localhost
   vars:
     student_name: Manju Reddy
     student_dob: "01-01-2001"
