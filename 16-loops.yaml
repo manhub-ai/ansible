@@ -3,7 +3,7 @@
   become: yes
   tasks:
   - name: install multiple packages
-    ansible.builtin.paclage:
+    ansible.builtin.package:
       name: "{{ item }}"
       state: latest
     loop:
