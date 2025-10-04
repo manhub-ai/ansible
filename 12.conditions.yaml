@@ -1,0 +1,9 @@
+- name: Conditions in Ansible
+  hosts: localhost
+  vars:
+   number: 7  
+  tasks:
+  - name: check the number and print if it satisfies the condition
+    ansible.builtin.debug:
+      msg: The given number is {{ number }} is less then 10
+    where: number < 10
