@@ -1,0 +1,7 @@
+- name: gather facts
+  hosts: localhost 
+  #Ansible collects the info of tagets server, before executing any tasks
+  tasks:
+  - name: Print fact details
+    ansible.builtin.debug:
+      msg: " Printing Ansible facts {{ ansible_facts }}"
