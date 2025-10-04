@@ -2,13 +2,13 @@
   hosts: localhost
   tasks:
   - name: install nginx package if the OS is RedHat
-    ansible.biultin.dnf:
+    ansible.builtin.dnf:
       name: nginx
       state: latest
     when: ansible_os_family == "RedHat"
 
   - name: install nginx package if the OS is Debian
-    ansible.biultin.apt:
+    ansible.builtin.apt:
       name: nginx
       state: latest
     when: ansible_os_family == "Debian"
