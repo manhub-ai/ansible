@@ -1,0 +1,14 @@
+- name: check facts and then install package
+  hosts: localhost
+  tasks:
+  - name: install nginx package if the OS is RedHat
+    ansible.biultin.dnf:
+      name: nginx
+      state: latest
+    when: ansible_os_family == "RedHat"
+
+  - name: install nginx package if the OS is Debian
+    ansible.biultin.apt:
+      name: nginx
+      state: latest
+    when: ansible_os_family == "Debian"
