@@ -1,5 +1,6 @@
 - name: check facts and then install package
   hosts: localhost
+  become: yes
   tasks:
   - name: install nginx package if the OS is RedHat
     ansible.builtin.dnf:
