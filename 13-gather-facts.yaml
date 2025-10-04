@@ -1,7 +1,19 @@
-- name: gather facts
+# - name: gather facts
+#   hosts: localhost 
+#   #Ansible collects the info of tagets server, before executing any tasks
+#   tasks:
+#   - name: Print fact details
+#     ansible.builtin.debug:
+#       msg: " Printing Ansible facts {{ ansible_facts }}"
+
+
+- name: Print OS and user info
   hosts: localhost 
-  #Ansible collects the info of tagets server, before executing any tasks
   tasks:
   - name: Print fact details
-    ansible.builtin.debug:
-      msg: " Printing Ansible facts {{ ansible_facts }}"
+  ansible.builtin.debug:
+    msg: |
+      OS Family: {{ ansible_facts['os_family'] }}
+      Distribution: {{ ansible_facts['distribution'] }}
+      Kernel: {{ ansible_facts['kernel'] }}
+      User: {{ ansible_facts['user_id'] }}
