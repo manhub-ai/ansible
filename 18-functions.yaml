@@ -1,5 +1,5 @@
 - name: functions
-  host: localhost
+  hosts: localhost
   tasks:
   - name: default variables
     ansible.builtin.debug:
