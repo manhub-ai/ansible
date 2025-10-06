@@ -2,6 +2,16 @@
   hosts: localhost
   vars:
     technologies: DevOps, Linux, Shell, Ansible # string
+    # dictionary == map
+    tags:
+      Application: Payment
+      Environment: UAT
+    # List
+    listTags:
+    - key: Application
+      value: payment
+    - key: Environment
+      value: dev
   tasks:
   - name: default variables
     ansible.builtin.debug:
@@ -10,3 +20,9 @@
   - name: convert string to list
     ansible.builtin.debug:
       msg: "technologies are: {{ technologies | split(',') }}"
+  - name: Convert map to list
+    ansible.builtin.debug:
+      msg: "Tags are: {{ tags | dict2items }}"
+  - name: convert list to map
+    ansible.builtin.debug:
+      msg: tag map: {{ listTags | items2dict}}
