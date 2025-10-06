@@ -1,11 +1,15 @@
 - name: functions
-  hosts: localhost
+  hosts: local
+  connection: local
   vars:
     technologies: DevOps, Linux, Shell, Ansible # string
+    name: "Sivakumar reddy M"
+    gmail: Info@GMAIL.COM
+    ipaddress: "19222.168.0.1"
     # dictionary == map
     tags:
-      Application: Payment
-      Environment: UAT
+      Application: payment
+      Environment: dev
     # List
     listTags:
     - key: Application
@@ -13,21 +17,24 @@
     - key: Environment
       value: dev
   tasks:
-  - name: default variables
+  - name: default variable
     ansible.builtin.debug:
-      msg: "hello, {{ name | default('Manju') }}"
+      msg: "Hello, {{ name | default('Ramesh') }}"
+    
   # string to list
   - name: convert string to list
     ansible.builtin.debug:
-      msg: "technologies are: {{ technologies | split(',') }}"
-  - name: Convert map to list
+      msg: "Technologies are: {{ technologies | split(',') }}"
+
+  - name: convert map to list
     ansible.builtin.debug:
       msg: "Tags are: {{ tags | dict2items }}"
-  - name: convert list to map
+
+  - name: convert list into map
     ansible.builtin.debug:
       msg: "tag map: {{ listTags | items2dict }}"
 
-  - name: read yaml file and take into the file
+  - name: read yaml and take it into variable
     ansible.builtin.set_fact:
       student_yaml: "{{ lookup('file', 'student.yaml') | from_yaml }}"
 
@@ -37,5 +44,5 @@
 
   - name: save json to file
     ansible.builtin.copy:
-      dest: ./student-data.json
+      dest: ./stundent-data.json
       content: "{{ student_yaml | to_nice_json  }}"
