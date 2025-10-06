@@ -47,7 +47,7 @@
   
   - name: convert to uppercase
     ansible.biultin.debug:
-      msg: "{{ name | upper }}""
+      msg: "{{ name | upper }}"
   - name: convert to lowercase
     ansible.biultin.debug:
-      msg: "{{ email | lower }}""
+      msg: "{{ email | lower }}"
