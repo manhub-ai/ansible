@@ -46,8 +46,8 @@
       content: "{{ student_yaml | to_nice_json  }}"
   
   - name: convert to uppercase
-    ansible.biultin.debug:
+    ansible.builtin.debug:
       msg: "{{ name | upper }}"
   - name: convert to lowercase
-    ansible.biultin.debug:
+    ansible.builtin.debug:
       msg: "{{ email | lower }}"
