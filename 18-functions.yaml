@@ -25,4 +25,4 @@
       msg: "Tags are: {{ tags | dict2items }}"
   - name: convert list to map
     ansible.builtin.debug:
-      msg: "tag map: {{ listTags | items2dict }}""
+      msg: "tag map: {{ listTags | items2dict }}"
